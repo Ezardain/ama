@@ -8,16 +8,20 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'devise-i18n'
 gem 'pundit'
 gem 'simple_form'
+gem 'high_voltage', '~> 2.2.1'
+
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
@@ -31,15 +35,18 @@ group :development do
   gem 'rb-inotify', :require=>false
   gem 'spring-commands-rspec'
 end
+
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
   gem 'rubocop'
 end
+
 group :production do
   gem 'puma'
 end
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
