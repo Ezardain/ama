@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :name, presence: true
-  validates :last_name, presence: true
-  validates :name_with_color, presence: true, uniqueness: true
+  #validates :name, presence: true
+  #validates :last_name, presence: true
+  #validates :name_with_color, presence: true, uniqueness: true
 end
