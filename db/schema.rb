@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20150227231920) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.string   "last_name"
+    t.string   "name_with_color"
     t.integer  "role"
   end
 
