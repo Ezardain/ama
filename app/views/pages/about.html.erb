@@ -1,11 +1,43 @@
-<div class="jumbotron">
-  <div class="col-md-4">
-    <h2 class="text-center">[Foto]</h2>
+<header>
+	<style>
+		.slider-size {
+		height: 400px; /* This is your slider height */
+		}
+		.carousel {
+		width:100%; 
+		margin:0 auto; /* center your carousel if other than 100% */ 
+		}
+	</style>
+</header>
+
+<div id="carousel-example" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example" data-slide-to="1"></li>
+    <li data-target="#carousel-example" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+	<div class="item active">
+	    <div style="background:url(/path/image.jpg) center center; 
+	          background-size:cover;" class="slider-size">
+	      <div class="carousel-caption"></div>
+	    </div>
+	  </div>
   </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="javascript:void(0)" data-slide="prev" data-target="#carousel-example">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="javascript:void(0)" data-slide="next" data-target="#carousel-example">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
 
   <div class="col-md-8">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget massa sed risus eleifend consequat. Phasellus eget dui id mauris pretium tincidunt. Fusce et mattis erat. Proin placerat nibh vel euismod hendrerit. Vestibulum volutpat massa a felis consequat fermentum eu non neque. Suspendisse egestas diam id lacus aliquet elementum. Quisque bibendum lectus vitae rhoncus euismod. Mauris mattis risus non lobortis placerat. Fusce vel ultricies ipsum. In lobortis pretium justo, ut blandit enim sagittis ut.</p>
     <p>Ut rhoncus, augue et bibendum commodo, diam massa euismod quam, in viverra nunc nulla in tortor. In quis porta lorem. Donec sit amet faucibus velit, vel rutrum diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed in felis ut purus lobortis iaculis in sit amet augue. Fusce finibus sem id elit vestibulum sodales. Mauris faucibus, nunc a tempus eleifend, velit massa lacinia est, quis pellentesque leo diam vel ligula. Donec mollis lorem neque, nec facilisis dolor rutrum luctus. Cras ut blandit ante, id sagittis arcu.</p>
   </div>
-
-</div>

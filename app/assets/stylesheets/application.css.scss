@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap";
+body {
+    background-color: #FEF7E7;
+}
+.jumbotron {
+    background-color: #FEF7E7;
+}
+main {
+    background-color: #FEF7E7;    
+}
+#new_user {
+	background-color: rgba(144,207,200,0.5)  
+}
