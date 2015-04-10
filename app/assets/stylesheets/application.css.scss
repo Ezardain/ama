@@ -18,20 +18,23 @@
 body {
     background-color: white;
 }
+
 nav.navbar.navbar-inverse.navbar-fixed-top {
-	background-color: rgba(255,248,3,0.3);
+	background-color: rgba(255,248,3,0.7);
 	border-style: solid;
 	border-color: rgba(255,248,3,0.0);
 }
+
 a.navbar-brand {
 	color: rgb(0,0,0);
 }
-.jumbotron {
-    background-color: white;
+
+#nav_texto{
+	color: black;
 }
 
-a:hover{
-	color:red;
+.jumbotron {
+    background-color: white;
 }
 
 main {
@@ -44,8 +47,6 @@ input.button.right {
 	background-color: #90CFC8; 
 }
 
-<<<<<<< HEAD
-=======
 h1{
 	text-align:center;
 }
@@ -65,4 +66,3 @@ h1{
 	padding: 20px;
 
 }
->>>>>>> origin/master

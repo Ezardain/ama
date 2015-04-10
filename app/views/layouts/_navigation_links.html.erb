@@ -1,9 +1,10 @@
 <%# add navigation links to this file %>
-<li><%= link_to 'Nosotros', page_path('about')%></li>
-<li><%= link_to 'Juegos', page_path('games')%></li>
-<li><%= link_to 'Contacto', page_path('details')%></li>
+<li ><a href="/pages/about" id="nav_texto">Nosotros</a></li>
+<li><a href="/pages/games" id="nav_texto">Juegos</a></li>
+<li><a href="/pages/details" id="nav_texto">Contacto</a></li>
 <% if user_signed_in? %>
-  <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
+  <li><%=  link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
 <% else %>
   <li><%= link_to 'Login', new_user_session_path %></li>
 <% end %>
+
