@@ -1,24 +1,36 @@
 <head>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 <style>
-  #video {
-    padding-top: 75px;
-  }
+	main::after{
+		background: blue;
+	}
 </style>
 </head>
-<section>
-  <div class="col-md-6">
-    <h1>Bienvenidos</h1>
-    <h2>Misión</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget massa sed risus eleifend consequat. Phasellus eget dui id mauris pretium tincidunt. Fusce et mattis erat. Proin placerat nibh vel euismod hendrerit. Vestibulum volutpat massa a felis consequat fermentum eu non neque.</p>
-    <h2>Visión</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget massa sed risus eleifend consequat. Phasellus eget dui id mauris pretium tincidunt. Fusce et mattis erat. Proin placerat nibh vel euismod hendrerit. Vestibulum volutpat massa a felis consequat fermentum eu non neque.</p>
-  </div>
 
-  <div class="col-md-6" id="video">
-    <h2 class="text-center">Conócenos</h2>
-    <div class="embed-responsive embed-responsive-16by9 video">
-      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FmFEB0ESiy0"></iframe>
-    </div>
-  </div>
+<!-- Seccion video -->
+<section id="sec_video">
+	<div class="row">
+	  <!-- Video -->
+	  <div class="col-md-8 col-md-offset-2" >
+	  	<div class="col-md-12" id="video">
+	    	<div class="embed-responsive embed-responsive-16by9 video">
+	      	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FmFEB0ESiy0"></iframe>
+	    	</div>
+	  	</div>
+	  </div>
+	</div>
+</section>
+
+<!-- Seccion Texto -->
+<section id="sec_misionvision" style="background: blue">
+	<div class="row">
+		<div class="col-md-5 col-md-offset-1">
+			<h1>Misión</h1>
+    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget massa sed risus eleifend consequat. Phasellus eget dui id mauris pretium tincidunt. Fusce et mattis erat. Proin placerat nibh vel euismod hendrerit. Vestibulum volutpat massa a felis consequat fermentum eu non neque.</p>
+    	</div>
+    	<div class="col-md-5">
+    		<h1>Visión</h1>
+    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget massa sed risus eleifend consequat. Phasellus eget dui id mauris pretium tincidunt. Fusce et mattis erat. Proin placerat nibh vel euismod hendrerit. Vestibulum volutpat massa a felis consequat fermentum eu non neque.</p>
+    	</div>
+	</div>
 </section>
