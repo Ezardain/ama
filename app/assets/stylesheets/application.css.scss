@@ -14,8 +14,6 @@
  *= require_self
  */
 
-$linkColor: #000000;
-
  @import "bootstrap";
 body {
     background-color: white;
@@ -34,6 +32,12 @@ a.navbar-brand {
 #nav_texto{
 	color: black;
 }
+
+#nav_boton:hover{
+	background: white;
+}
+
+
 
 .jumbotron {
     background-color: white;

@@ -1,10 +1,10 @@
 <%# add navigation links to this file %>
-<li ><a href="/pages/about" id="nav_texto">Nosotros</a></li>
-<li><a href="/pages/games" id="nav_texto">Juegos</a></li>
-<li><a href="/pages/details" id="nav_texto">Contacto</a></li>
+<li id="nav_boton"><a href="/pages/about" id="nav_texto">Nosotros</a></li>
+<li id="nav_boton"><a href="/pages/games" id="nav_texto">Juegos</a></li>
+<li id="nav_boton"><a href="/pages/details" id="nav_texto">Contacto</a></li>
 <% if user_signed_in? %>
-  <li><%=  link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
+  <li id="nav_boton"><%=  link_to 'Logout', destroy_user_session_path, :id=>'nav_texto', :method=>'delete' %></li>
 <% else %>
-  <li><%= link_to 'Login', new_user_session_path %></li>
+  <li id="nav_boton"><%= link_to 'Login', new_user_session_path, :id=>'nav_texto' %></li>
 <% end %>
 
