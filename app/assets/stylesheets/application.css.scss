@@ -16,14 +16,24 @@
 
  @import "bootstrap";
 body {
-    background-color: #white;
+    background-color: white;
 }
 nav.navbar.navbar-inverse.navbar-fixed-top {
-	background-color: rgba(255,248,3,0.3)  
+	background-color: rgba(255,248,3,0.3);
+	border-style: solid;
+	border-color: rgba(255,248,3,0.0);
+}
+a.navbar-brand {
+	color: rgb(0,0,0);
 }
 .jumbotron {
-    background-color: #white;
+    background-color: white;
 }
+
+a:hover{
+	color:red;
+}
+
 main {
     background-color: white;    
 }
@@ -33,3 +43,4 @@ main {
 input.button.right {
 	background-color: #90CFC8; 
 }
+
