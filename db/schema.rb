@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20150227231920) do
     t.string   "last_name"
     t.string   "name_with_color"
     t.integer  "role"
+    t.string   "student_number"
+    t.integer  "color_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
