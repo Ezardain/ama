@@ -16,14 +16,20 @@
 
  @import "bootstrap";
 body {
-    background-color: #FEF7E7;
+    background-color: #white;
+}
+nav.navbar.navbar-inverse.navbar-fixed-top {
+	background-color: rgba(255,248,3,0.3)  
 }
 .jumbotron {
-    background-color: #FEF7E7;
+    background-color: #white;
 }
 main {
-    background-color: #FEF7E7;    
+    background-color: white;    
 }
 #new_user {
 	background-color: rgba(144,207,200,0.5)  
+}
+input.button.right {
+	background-color: #90CFC8; 
 }
