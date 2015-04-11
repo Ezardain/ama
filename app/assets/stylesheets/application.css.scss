@@ -17,13 +17,13 @@
  @import "bootstrap";
 
 @font-face {
-	font-family: 'Franklin Gothic Medium';
-	src: url('/fonts/Franklin Gothic Medium.ttf') format('truetype');
+	font-family: 'Franklin Gothic Book';
+	src: url('/fonts/Franklin Gothic Book.ttf') format('truetype');
 }
 
 body {
     background-color: white;
-    font-family: 'Franklin Gothic Medium';
+    font-family: 'Franklin Gothic Book';
 }
 
 nav.navbar.navbar-inverse.navbar-fixed-top {
