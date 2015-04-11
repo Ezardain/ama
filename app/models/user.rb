@@ -18,7 +18,8 @@ class User < ActiveRecord::Base
   validates :name_with_color, uniqueness: true
 
   private
+
   def set_name_with_color
-    self.name_with_color = name + " " + color.name
+    self.name_with_color = self.name + ' ' + color.name
   end
 end

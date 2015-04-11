@@ -5,8 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-user = CreateAdminService.new.call
-puts 'CREATED ADMIN USER: ' << user.email
+
 
 Color.create(name: "BLANCO", hex_code: "#FFFFFF")
 Color.create(name: "AZUR", hex_code: "#F0FFFF")
@@ -148,3 +147,6 @@ Color.create(name: "AZUL MARINO", hex_code: "#000080")
 Color.create(name: "ROJO OSCURO", hex_code: "#8B0000")
 Color.create(name: "GRANATE", hex_code: "#800000")
 Color.create(name: "NEGRO", hex_code: "#000000")
+
+user = CreateAdminService.new.call
+puts 'CREATED ADMIN USER: ' << user.email
