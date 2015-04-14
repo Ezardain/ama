@@ -1,7 +1,0 @@
-<%= simple_form_for @session, :url => url_for(:action => 'create', :controller => 'sessions') do |f| %>
-  <%= f.input :name %>
-  	<%= f.association :activity_id, collection: Activity.all %>
-  <%= f.input :description %>
-  <%= f.association :type, collection: ["Tutoría", "Dinámica"] %>
-  <%= f.button :submit %>
-<% end %>

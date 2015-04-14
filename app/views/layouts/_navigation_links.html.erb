@@ -9,6 +9,7 @@
       <li><%= link_to 'Usuarios', users_admin_index_path, id: 'nav_texto' %></li>
       <li><%= link_to 'Semestres', semesters_path, id: 'nav_texto' %></li>
       <li><%= link_to 'Actividades', activities_path, id: 'nav_texto' %></li>
+       <li><%= link_to 'Sesiones', activity_sessions_path, id: 'nav_texto' %></li>
       <li class="divider"></li>
       <li id="nav_boton"><%=  link_to 'Logout', destroy_user_session_path, :id=>'nav_texto', :method=>'delete' %></li>
     </ul>

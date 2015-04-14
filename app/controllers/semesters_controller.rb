@@ -37,6 +37,8 @@ class SemestersController < ApplicationController
   private
 
   def semester_params
-    params.require(:semester).permit(:name, :start_date, :end_date)
+    params.require(:semester)
+      .permit(:name, :start_date, :end_date,
+              activity_instances_attributes: [:activity_id, :hours, :_destroy])
   end
 end
