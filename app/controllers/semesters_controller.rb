@@ -25,7 +25,7 @@ class SemestersController < ApplicationController
 
   def edit
     @semester = Semester.find(params[:id])
-    authorize @user
+    authorize @semester
   end
 
   def update
