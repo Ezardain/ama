@@ -1,24 +1,25 @@
-<%= link_to 'Nueva Sesión', new_activity_session_path, class: 'btn btn-default'%>
-
-<div class="table-responsive">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th class="text-center">Sesión</th>
-        <th class="text-center">Actividad</th>
-        <th class="text-center">Fecha</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @activity_sessions.each do |activity_session| %>
+<div id="todo_pagina">
+  <%= link_to 'Nueva Sesión', new_activity_session_path, class: 'btn btn-default'%>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
         <tr>
-          <td class="text-center"><%= activity_session.name %></td>
-          <td class="text-center"><%= activity_session.activity_instance.name %></td>
-          <td class="text-center"><%= activity_session.start_date %></td>
-          <td><a><%= link_to 'Editar', edit_activity_session_path(activity_session), class: 'btn btn-default btn-sm' %></a></td>
+          <th class="text-center">Sesión</th>
+          <th class="text-center">Actividad</th>
+          <th class="text-center">Fecha</th>
+          <th></th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <% @activity_sessions.each do |activity_session| %>
+          <tr>
+            <td class="text-center"><%= activity_session.name %></td>
+            <td class="text-center"><%= activity_session.activity_instance.name %></td>
+            <td class="text-center"><%= activity_session.start_date %></td>
+            <td><a><%= link_to 'Editar', edit_activity_session_path(activity_session), class: 'btn btn-default btn-sm' %></a></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>

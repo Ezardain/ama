@@ -1,14 +1,16 @@
-<%= simple_form_for @semester do |f| %>
-  <%= f.input :name %>
-  <%= f.input :start_date, as: :date %>
-  <%= f.input :end_date %>
+<div id="todo_pagina">
+  <%= simple_form_for @semester do |f| %>
+    <%= f.input :name %>
+    <%= f.input :start_date, as: :date %>
+    <%= f.input :end_date %>
 
-  <%= f.simple_fields_for :activity_instances do |ff| %>
-    <%= ff.association :activity, collection: Activity.all %>
-    <%= ff.input :hours %>
-    <%= ff.link_to_remove "Remover esta actividad", class: 'btn btn-default' %>
+    <%= f.simple_fields_for :activity_instances do |ff| %>
+      <%= ff.association :activity, collection: Activity.all %>
+      <%= ff.input :hours %>
+      <%= ff.link_to_remove "Remover esta actividad", class: 'btn btn-default' %>
+    <% end %>
+    <%= f.link_to_add 'Agregar Actividad', :cases, class: 'btn btn-default add' %>
+
+    <%= f.button :submit %>
   <% end %>
-  <%= f.link_to_add 'Agregar Actividad', :cases, class: 'btn btn-default add' %>
-
-  <%= f.button :submit %>
-<% end %>
+</div>

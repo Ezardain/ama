@@ -1,8 +1,10 @@
-<%= simple_form_for @activity_session do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :type, collection: ["Teórica", "Dinámica"]  %>
-  <%= f.association :activity_instance %>
-  <%= f.input :start_date, as: :date  %>
-  <%= f.button :submit %>
-<% end %>
+<div id="todo_pagina">
+	<%= simple_form_for @activity_session do |f| %>
+	  <%= f.input :name %>
+	  <%= f.input :description %>
+	  <%= f.input :type, collection: ["Teórica", "Dinámica"]  %>
+	  <%= f.association :activity_instance %>
+	  <%= f.input :start_date, as: :date  %>
+	  <%= f.button :submit %>
+	<% end %>
+</div>
