@@ -1,6 +1,7 @@
 <%= simple_form_for @user, :url => url_for(:action => 'create', :controller => 'users') do |f| %>
+  <%= f.input :student_number %>
   <%= f.input :name %>
-  	<%= f.association :color, collection: Color.all.map { |c| [c.name, c.hex_code] } %>
+  <%= f.association :color, collection: Color.all %>
   <%= f.input :last_name %>
   <%= f.input :email %>
   <%= f.input :password %>

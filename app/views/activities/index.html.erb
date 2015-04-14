@@ -1,0 +1,22 @@
+<%= link_to 'Nueva Actividad', new_activity_path, class: 'btn btn-default'%>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="text-center"> Nombre </th>
+        <th class="text-center"> Horas </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @activities.each do |activity| %>
+        <tr>
+          <td class="text-center"><%= activity.name %></td>
+          <td class="text-center"><%= activity.hours %></td>
+          <td><a><%= link_to 'Editar', edit_activity_path(activity), class: 'btn btn-default btn-sm' %></a></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

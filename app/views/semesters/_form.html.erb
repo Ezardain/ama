@@ -1,0 +1,6 @@
+<%= simple_form_for @semester do |f| %>
+  <%= f.input :name %>
+  <%= f.input :start_date, as: :date %>
+  <%= f.input :end_date %>
+  <%= f.button :submit %>
+<% end %>
