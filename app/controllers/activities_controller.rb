@@ -13,7 +13,7 @@ class ActivitiesController < ApplicationController
   def create
     @activity = Activity.new(activity_params)
     if @activity.save
-      flash[:success] = 'Actividad creado con éxito'
+      flash[:notice] = 'Actividad creado con éxito'
       redirect_to activities_path
     else
       render 'new'
