@@ -1,0 +1,22 @@
+<%= link_to 'Nuevo Grupo', new_group_path, class: 'btn btn-default'%>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="text-center"> Nombre </th>
+        <th class="text-center"> Semestre </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @groups.each do |group| %>
+        <tr>
+          <td class="text-center"><%= group.name %></td>
+          <td class="text-center"><%= group.semester.name %></td>
+          <td><a><%= link_to 'Editar', edit_group_path(group), class: 'btn btn-default btn-sm' %></a></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

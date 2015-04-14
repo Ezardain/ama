@@ -78,10 +78,20 @@ ActiveRecord::Schema.define(version: 20150227231920) do
 
   create_table "activity_sessions", force: :cascade do |t|
     t.string   "name"
-    t.string   "description"
+    t.text     "description"
     t.string   "type"
     t.integer  "activity_instance_id"
     t.datetime "start_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "activity_reports", force: :cascade do |t|
+    t.integer  "activity_instance_id"
+    t.integer  "user_id"
+    t.integer  "hour_estimate"
+    t.integer  "hours_given"
+    t.text     "comentary"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

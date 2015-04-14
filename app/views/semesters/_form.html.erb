@@ -1,4 +1,4 @@
-<%= simple_form_for @semester do |f| %>
+<%= simple_nested_form_for @semester do |f| %>
   <%= f.input :name %>
   <%= f.input :start_date, as: :date %>
   <%= f.input :end_date %>
@@ -8,7 +8,7 @@
     <%= ff.input :hours %>
     <%= ff.link_to_remove "Remover esta actividad", class: 'btn btn-default' %>
   <% end %>
-  <%= f.link_to_add 'Agregar Actividad', :cases, class: 'btn btn-default add' %>
+  <%= f.link_to_add 'Agregar Actividad', :activity_instances, class: 'btn btn-default add' %>
 
   <%= f.button :submit %>
 <% end %>

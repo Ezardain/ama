@@ -1,0 +1,8 @@
+<%= simple_form_for @activity_report do |f| %>
+  <%= f.input :activity_instance, collection: ActivityInstance.all %>
+  <%= f.input :user_id, value: current_user.id %>
+  <%= f.input :hour_estimate %>
+  <%= f.input :comentary %>
+
+
+<% end %>
