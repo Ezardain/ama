@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :activities
   resources :semesters
   resources :activity_sessions
+  resources :groups
+  resources :activity_reports
 end

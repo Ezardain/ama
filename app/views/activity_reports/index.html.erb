@@ -1,0 +1,28 @@
+<%= link_to 'Nuevo Reporte', new_activity_report_path, class: 'btn btn-default'%>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="text-center"> Matricula </th>
+        <th class="text-center"> Actividad </th>
+        <th class="text-center"> Horas de Actividad </th>
+        <th class="text-center"> Horas Estimadas </th>
+        <th class="text-center"> Horas Asigndas </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @activity_reports.each do |activity_report| %>
+        <tr>
+          <td class="text-center"><%= activity_report.user.matricula %></td>
+          <td class="text-center"><%= activity_report.activity_instance.name %></td>
+          <td class="text-center"><%= activity_report.activity_instance.hours %></td>
+          <td class="text-center"><%= activity_report.hour_estimate %></td>
+          <td class="text-center"><%= activity_report.hours_given %></td>
+          <td><a><%= link_to 'Editar', edit_activity_report_path(activity_report), class: 'btn btn-default btn-sm' %></a></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
