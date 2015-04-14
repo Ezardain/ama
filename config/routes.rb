@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :users_admin, :controller => 'users'
   resources :activities
   resources :semesters
+  resources :activity_sessions
 end

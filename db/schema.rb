@@ -76,11 +76,11 @@ ActiveRecord::Schema.define(version: 20150227231920) do
     t.datetime "updated_at"
   end
 
-  create_table "session", force: :cascade do |t|
+  create_table "activity_sessions", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
     t.string   "type"
-    t.integer  "activity_id"
+    t.integer  "activity_instance_id"
     t.datetime "start_date"
     t.datetime "created_at"
     t.datetime "updated_at"
