@@ -1,27 +1,29 @@
 <%= link_to 'Nuevo Usuario', new_users_admin_path, class: 'btn btn-default'%>
-<div class="table-responsive">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th class="text-center"> Matrícula </th>
-        <th class="text-center"> Nombre </th>
-        <th class="text-center"> Apellidos </th>
-        <th class="text-center"> Color </th>
-        <th class="text-center"> Email </th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @users.each do |user| %>
+<div id="todo_pagina">
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
         <tr>
-          <td class="text-center"><%= user.student_number %></td>
-          <td class="text-center"><%= user.name %></td>
-          <td class="text-center"><%= user.last_name %></td>
-          <td class="text-center"><%= user.color.name %></td>
-          <td class="text-center"><%= user.email %></td>
-          <td><a><%= link_to 'Edit', edit_users_admin_path(user), class: 'btn btn-default btn-sm' %></a></td>
+          <th class="text-center"> Matrícula </th>
+          <th class="text-center"> Nombre </th>
+          <th class="text-center"> Apellidos </th>
+          <th class="text-center"> Color </th>
+          <th class="text-center"> Email </th>
+          <th></th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td class="text-center"><%= user.student_number %></td>
+            <td class="text-center"><%= user.name %></td>
+            <td class="text-center"><%= user.last_name %></td>
+            <td class="text-center"><%= user.color.name %></td>
+            <td class="text-center"><%= user.email %></td>
+            <td><a><%= link_to 'Edit', edit_users_admin_path(user), class: 'btn btn-default btn-sm' %></a></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
