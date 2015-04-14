@@ -4,14 +4,17 @@ class SemestersController < ApplicationController
 
   def index
     @semesters = Semester.all
+    authorize Semester
   end
 
   def new
     @semester = Semester.new
+    authorize @semester
   end
 
   def create
     @semester = Semester.new(semester_params)
+    authorize @semester
     if @semester.save
       flash[:success] = 'Semestre creado con éxito'
       redirect_to semesters_path
@@ -22,10 +25,12 @@ class SemestersController < ApplicationController
 
   def edit
     @semester = Semester.find(params[:id])
+    authorize @user
   end
 
   def update
     @semester = Semester.find(params[:id])
+    authorize @semester
     if @semester.update_attributes(semester_params)
       flash[:success] = 'Semester updated successfully'
       redirect_to semesters_path

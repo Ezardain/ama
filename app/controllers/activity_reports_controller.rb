@@ -4,14 +4,17 @@ class ActivityReportsController < ApplicationController
 
   def index
     @activity_reports = ActivityReport.all
+    authorize ActivityReport
   end
 
   def new
     @activity_report = ActivityReport.new
+    authorize @activity_report
   end
 
   def create
     @activity_report = ActivityReport.new(activity_report_params)
+    authorize @activity_report
     if @activity_report.save
       flash[:notice] = 'Grupo creado con éxito'
       redirect_to activity_reports_path
@@ -22,10 +25,12 @@ class ActivityReportsController < ApplicationController
 
   def edit
     @activity_report = ActivityReport.find(params[:id])
+    authorize @activity_report
   end
 
   def update
     @activity_report = ActivityReport.find(params[:id])
+    authorize @activity_report
     if @activity_report.update_attributes(activity_report_params)
       flash[:success] = 'ActivityReport updated successfully'
       redirect_to activity_reports_path

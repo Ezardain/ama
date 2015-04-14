@@ -4,14 +4,17 @@ class ActivitiesController < ApplicationController
 
   def index
     @activities = Activity.all
+    authorize Activity
   end
 
   def new
     @activity = Activity.new
+    authorize @activity
   end
 
   def create
     @activity = Activity.new(activity_params)
+    authorize @activity
     if @activity.save
       flash[:notice] = 'Actividad creado con éxito'
       redirect_to activities_path
@@ -22,10 +25,12 @@ class ActivitiesController < ApplicationController
 
   def edit
     @activity = Activity.find(params[:id])
+    authorize @activity
   end
 
   def update
     @activity = Activity.find(params[:id])
+    authorize @activity
     if @activity.update_attributes(activity_params)
       flash[:success] = 'Activity updated successfully'
       redirect_to activities_path
