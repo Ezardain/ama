@@ -1,9 +1,16 @@
 <%= simple_form_for @user, :url => url_for(:action => 'create', :controller => 'users') do |f| %>
   <%= f.input :name %>
-  <%= f.input :color_id, collection: Color.all %>
+  	<%= f.association :color, collection: Color.all.map { |c| [c.name, c.hex_code] } %>
   <%= f.input :last_name %>
   <%= f.input :email %>
   <%= f.input :password %>
   <%= f.input :password_confirmation %>
   <%= f.button :submit %>
 <% end %>
+
+<script>
+$("#user_color_id").change(function() {
+	$("#user_color_id").attr("style", "background-color: " + 
+		$("#user_color_id option:selected").attr("value")
+		)
+});

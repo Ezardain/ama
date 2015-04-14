@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20150227231920) do
   create_table "colors", force: :cascade do |t|
     t.string   "name"
     t.string   "hex_code"
+    t.string   "style"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

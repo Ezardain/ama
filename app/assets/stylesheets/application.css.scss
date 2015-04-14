@@ -27,7 +27,7 @@ body {
 }
 
 nav.navbar.navbar-inverse.navbar-fixed-top {
-	background-color: rgba(255,248,3,0.7);
+	background-color: rgba(255,248,3,1);
 	border-style: solid;
 	border-color: rgb(255,255,255);
 }
@@ -71,33 +71,54 @@ a.navbar-brand {
 }
 
 main {
-    background-color: white;    
+	background-image: url('/images/bonito.png');
+}
+
+#todo_home{
+	background-color: white;
+	border: 2px solid transparent;
+	border-bottom-left-radius: 2em;
+	border-bottom-right-radius: 2em;
+	box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.5);
+}
+
+section {
+	background-color: white;
+	margin: 0px 20px 0px 20px;
 }
 
 #new_user {
 	background-color: rgba(144,207,200,0.5)  
 }
 input.button.right {
-	background-color: #90CFC8; 
+	background-color: #90CFC8;
 }
 
 h1{
 	text-align:center;
 }
 
+#sec_video{
+	padding-bottom: 20px;
+}
+
 #video{
-	padding: 5px;
+	padding: 5px 5px 5px 5px;
 	background-color: rgba(255,255,255,0.5);
 	-webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.5);
 	-moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.5);
 	box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.5);
 }
 
+#sec_misionvision{
+	padding: 50px 0px;
+}
+
 #textoMV1{
 	background: green;
 	color: white;
 	margin: 5px;
-	padding: 20px;
+	padding: 20px 20px 20px 20px;
 
 }
 
