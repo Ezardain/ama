@@ -1,6 +1,7 @@
 <%= simple_form_for @user, :url => url_for(:action => 'create', :controller => 'users') do |f| %>
+  <%= f.input :student_number %>
   <%= f.input :name %>
-  	<%= f.association :color, collection: Color.all.map { |c| [c.name, c.hex_code] } %>
+  <%= f.association :color, collection: Color.all.map { |c| [c.name, c.id, { :hex_code => c.hex_code }] } %>
   <%= f.input :last_name %>
   <%= f.input :email %>
   <%= f.input :password %>
@@ -11,6 +12,7 @@
 <script>
 $("#user_color_id").change(function() {
 	$("#user_color_id").attr("style", "background-color: " + 
-		$("#user_color_id option:selected").attr("value")
+		$("#user_color_id option:selected").attr("hex_code")
 		)
 });
+</script>

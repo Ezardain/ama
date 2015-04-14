@@ -20,6 +20,6 @@ class User < ActiveRecord::Base
   private
 
   def set_name_with_color
-    self.name_with_color = self.name + ' ' + color.name
+    self.name_with_color = name + ' ' + color.name
   end
 end

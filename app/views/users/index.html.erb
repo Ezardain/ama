@@ -15,12 +15,12 @@
     <tbody>
       <% @users.each do |user| %>
         <tr>
-          <td class"text-center"><%= user.student_number %></td>
-          <td class"text-center"><%= user.name %></td>
-          <td class"text-center"><%= user.last_name %></td>
-          <td class"text-center"><%= user.color.name %></td>
-          <td class"text-center"><%= user.email %></td>
-          <td><a><%= link_to 'Edit', edit_user_path(user), class: 'btn btn-default btn-sm' %></a></td>
+          <td class="text-center"><%= user.student_number %></td>
+          <td class="text-center"><%= user.name %></td>
+          <td class="text-center"><%= user.last_name %></td>
+          <td class="text-center"><%= user.color.name %></td>
+          <td class="text-center"><%= user.email %></td>
+          <td><a><%= link_to 'Edit', edit_users_admin_path(user), class: 'btn btn-default btn-sm' %></a></td>
         </tr>
       <% end %>
     </tbody>

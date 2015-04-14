@@ -1,0 +1,24 @@
+<%= link_to 'Nuevo Semestre', new_semester_path, class: 'btn btn-default'%>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="text-center"> Nombre </th>
+        <th class="text-center"> Inicio </th>
+        <th class="text-center"> Final </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @semesters.each do |semester| %>
+        <tr>
+          <td class="text-center"><%= semester.name %></td>
+          <td class="text-center"><%= semester.start_date %></td>
+          <td class="text-center"><%= semester.end_date %></td>
+          <td><a><%= link_to 'Editar', edit_semester_path(semester), class: 'btn btn-default btn-sm' %></a></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
