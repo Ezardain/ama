@@ -30,7 +30,7 @@ nav.navbar.navbar-inverse.navbar-fixed-top {
 	background-color: rgba(255,248,3,1);
 	border-style: solid;
 	border-color: rgb(255,255,255);
-	margin-bottom: -40px;
+	margin-bottom: 30px;
 }
 
 a.navbar-brand {
@@ -73,6 +73,10 @@ a.navbar-brand {
 
 #nav_linea{
 	background:black;
+}
+
+div#todo_pagina {
+	margin-top: 13px;
 }
 
 /* .jumbotron {
