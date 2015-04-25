@@ -1,0 +1,10 @@
+<div id="todo_pagina">
+  <h1><%= @activity.name %></h1>
+  <p><%= @activity.description %></p>
+
+  <% @activity.attachments.each do |attachment| %>
+    <li><%= link_to "#{attachment.name}", attachment.file.url(:original, false) %></li>
+  <% end %>
+
+  <%= link_to 'Agregar Archivo', new_attachment_path, class: 'btn btn-default' %>
+</div>

@@ -11,7 +11,107 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150227231920) do
+ActiveRecord::Schema.define(version: 20150425220135) do
+
+  create_table "activities", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "hours"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "activity_instances", force: :cascade do |t|
+    t.integer  "activity_id"
+    t.integer  "semester_id"
+    t.integer  "hours"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "activity_report", force: :cascade do |t|
+    t.integer  "activity_instance_id"
+    t.integer  "user_id"
+    t.integer  "hour_estimate"
+    t.integer  "hours_given"
+    t.text     "comentary"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "activity_reports", force: :cascade do |t|
+    t.integer  "activity_instance_id"
+    t.integer  "user_id"
+    t.integer  "hour_estimate"
+    t.integer  "hours_given"
+    t.text     "comentary"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "activity_session", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "type"
+    t.integer  "activity_instance_id"
+    t.datetime "start_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "activity_sessions", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "type"
+    t.integer  "activity_instance_id"
+    t.datetime "start_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "attachments", force: :cascade do |t|
+    t.integer  "activity_id"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "name"
+  end
+
+  create_table "colors", force: :cascade do |t|
+    t.string   "name"
+    t.string   "hex_code"
+    t.string   "style"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.integer  "semester_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "semesters", force: :cascade do |t|
+    t.string   "name"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sessions", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "type"
+    t.integer  "activity_id"
+    t.datetime "start_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -36,63 +136,5 @@ ActiveRecord::Schema.define(version: 20150227231920) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-    
-  create_table "colors", force: :cascade do |t|
-    t.string   "name"
-    t.string   "hex_code"
-    t.string   "style"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
-  create_table "semesters", force: :cascade do |t|
-    t.string   "name"
-    t.date     "start_date"
-    t.date     "end_date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "activities", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.integer  "hours"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "activity_instances", force: :cascade do |t|
-    t.integer  "activity_id"
-    t.integer  "semester_id"
-    t.integer  "hours"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "groups", force: :cascade do |t|
-    t.integer  "semester_id"
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "activity_sessions", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.string   "type"
-    t.integer  "activity_instance_id"
-    t.datetime "start_date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "activity_reports", force: :cascade do |t|
-    t.integer  "activity_instance_id"
-    t.integer  "user_id"
-    t.integer  "hour_estimate"
-    t.integer  "hours_given"
-    t.text     "comentary"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 end

@@ -14,7 +14,10 @@
           <tr>
             <td class="text-center"><%= activity.name %></td>
             <td class="text-center"><%= activity.hours %></td>
-            <td><a><%= link_to 'Editar', edit_activity_path(activity), class: 'btn btn-default btn-sm' %></a></td>
+            <td>
+              <a><%= link_to 'Editar', edit_activity_path(activity), class: 'btn btn-default btn-sm' %></a>
+              <a><%= link_to 'Detalles', activity_path(activity), class: 'btn btn-default btn-sm' %></a>
+            </td>
           </tr>
         <% end %>
       </tbody>

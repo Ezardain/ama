@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'rails-i18n'
 gem 'nested_form'
+gem "paperclip", "~> 4.2"
 
 group :development, :test do
   gem 'byebug'

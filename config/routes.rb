@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :activity_sessions
   resources :groups
   resources :activity_reports
+  resources :attachments
 end
