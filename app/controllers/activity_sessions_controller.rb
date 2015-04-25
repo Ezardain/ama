@@ -13,7 +13,7 @@ class ActivitySessionsController < ApplicationController
   end
 
   def create
-    @activity_session = User.new(activity_session_params)
+    @activity_session = ActivitySession.new(activity_session_params)
     authorize @activity_session
     if @activity_session.save
       flash[:success] = 'Sesión creada con éxito'
@@ -42,6 +42,6 @@ class ActivitySessionsController < ApplicationController
   private
 
   def activity_session_params
-    params.require(:activity_session).permit(:activity_id, :name, :description, :type)
+    params.require(:activity_session).permit(:activity_id, :activity_instance_id, :name, :description, :type)
   end
 end

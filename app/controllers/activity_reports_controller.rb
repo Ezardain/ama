@@ -16,8 +16,8 @@ class ActivityReportsController < ApplicationController
     @activity_report = ActivityReport.new(activity_report_params)
     authorize @activity_report
     if @activity_report.save
-      flash[:notice] = 'Grupo creado con éxito'
-      redirect_to activity_reports_path
+      flash[:notice] = 'Reporte de Actividad creado con éxito'
+      redirect_to root_path
     else
       render 'new'
     end
@@ -32,7 +32,7 @@ class ActivityReportsController < ApplicationController
     @activity_report = ActivityReport.find(params[:id])
     authorize @activity_report
     if @activity_report.update_attributes(activity_report_params)
-      flash[:success] = 'ActivityReport updated successfully'
+      flash[:success] = 'Reporte de Actividad actualizado con éxito'
       redirect_to activity_reports_path
     else
       render 'edit'

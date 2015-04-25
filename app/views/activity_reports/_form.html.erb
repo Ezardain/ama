@@ -1,5 +1,5 @@
 <%= simple_form_for @activity_report do |f| %>
-  <%= f.input :activity_instance, collection: ActivityInstance.all %>
+  <%= f.association :activity_instance, collection: ActivityInstance.all %>
   <%= f.input :user_id, input_html: { value: current_user.id }, as: :hidden %>
   <%= f.input :hour_estimate %>
   <% if current_user.admin? %>

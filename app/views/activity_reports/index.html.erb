@@ -15,7 +15,7 @@
     <tbody>
       <% @activity_reports.each do |activity_report| %>
         <tr>
-          <td class="text-center"><%= activity_report.user.matricula %></td>
+          <td class="text-center"><%= activity_report.user.try :matricula %></td>
           <td class="text-center"><%= activity_report.activity_instance.name %></td>
           <td class="text-center"><%= activity_report.activity_instance.hours %></td>
           <td class="text-center"><%= activity_report.hour_estimate %></td>
