@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   belongs_to :color
   validates :name, presence: true
+  validates :cellphone, presence: true
   validates :color, presence: true
   validates :last_name, presence: true
   validates :name_with_color, uniqueness: true
