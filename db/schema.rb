@@ -29,32 +29,12 @@ ActiveRecord::Schema.define(version: 20150425220658) do
     t.datetime "updated_at"
   end
 
-  create_table "activity_report", force: :cascade do |t|
-    t.integer  "activity_instance_id"
-    t.integer  "user_id"
-    t.integer  "hour_estimate"
-    t.integer  "hours_given"
-    t.text     "comentary"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "activity_reports", force: :cascade do |t|
     t.integer  "activity_instance_id"
     t.integer  "user_id"
     t.integer  "hour_estimate"
     t.integer  "hours_given"
     t.text     "comentary"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "activity_session", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.string   "type"
-    t.integer  "activity_instance_id"
-    t.datetime "start_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -99,16 +79,6 @@ ActiveRecord::Schema.define(version: 20150425220658) do
     t.string   "name"
     t.date     "start_date"
     t.date     "end_date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "sessions", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.string   "type"
-    t.integer  "activity_id"
-    t.datetime "start_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
